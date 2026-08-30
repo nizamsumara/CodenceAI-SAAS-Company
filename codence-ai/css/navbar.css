@@ -1,0 +1,83 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.site-header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border-divider);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.nav-container {
+    max-width: 1440px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 0 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    display: block;
+    width: auto;
+    height: 32px;
+    object-fit: contain;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav-link,
+.btn-signin {
+    position: relative;
+    padding: 0.5rem 0;
+
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.nav-link::after,
+.btn-signin::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--text-primary);
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.btn-signin:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
