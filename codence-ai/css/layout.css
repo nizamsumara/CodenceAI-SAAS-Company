@@ -1,0 +1,372 @@
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    padding: 0.85rem 2rem;
+
+    background: var(--accent-brand);
+    color: var(--surface);
+
+    font-size: 14px;
+}
+
+.btn-primary:hover {
+    background: #004740;
+    box-shadow: 0 4px 12px rgba(0, 95, 86, 0.15);
+}
+
+
+/* =========================
+   BOOKING MODAL
+========================= */
+
+.booking-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(17, 22, 37, 0.75);
+    backdrop-filter: blur(4px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.booking-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.booking-modal-container {
+    position: relative;
+
+    width: 100%;
+    max-width: 1040px;
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: var(--surface);
+    border: 1px solid var(--border-divider);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.booking-modal-overlay.active .booking-modal-container {
+    transform: translateY(0);
+}
+
+.booking-modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 10;
+
+    color: var(--text-muted);
+    font-size: 28px;
+    font-weight: 300;
+
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.booking-modal-close:hover {
+    color: var(--text-primary);
+}
+
+
+/* =========================
+   BOOKING FORM
+========================= */
+
+.booking-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.booking-left-panel {
+    display: flex;
+    flex-direction: column;
+
+    padding: 3.5rem 3rem;
+    border-right: 1px solid var(--border-divider);
+}
+
+.booking-right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+
+    padding: 3.5rem 3rem;
+    background: #fafcff;
+}
+
+.booking-header {
+    margin-bottom: 2.5rem;
+}
+
+.booking-title {
+    margin-bottom: 1rem;
+
+    color: var(--text-primary);
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.booking-subtitle {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.booking-fields-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group.field-hidden {
+    display: none;
+}
+
+.form-label {
+    color: var(--text-primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+
+    background: var(--surface);
+    border: 1px solid var(--border-divider);
+    color: var(--text-primary);
+
+    font-family: var(--font-sans);
+    font-size: 14px;
+    outline: none;
+
+    transition: border-color 0.2s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    border-color: var(--text-primary);
+}
+
+.form-textarea {
+    resize: vertical;
+}
+
+
+/* =========================
+   CALENDAR
+========================= */
+
+.calendar-widget {
+    padding: 1.25rem;
+
+    background: var(--surface);
+    border: 1px solid var(--border-divider);
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 1.25rem;
+}
+
+.calendar-month-year {
+    color: var(--text-primary);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.calendar-nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.cal-nav-btn {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border-divider);
+    color: var(--text-primary);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: background 0.2s ease;
+}
+
+.cal-nav-btn:hover {
+    background: var(--background);
+}
+
+.calendar-weekdays,
+.calendar-days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-weekdays {
+    margin-bottom: 0.75rem;
+
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.calendar-days-grid {
+    gap: 4px;
+}
+
+.cal-day {
+    aspect-ratio: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-primary);
+    border: 1px solid transparent;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+.cal-day.disabled {
+    color: #cbd5e1;
+    cursor: not-allowed;
+}
+
+.cal-day.other-month {
+    color: #94a3b8;
+}
+
+.cal-day:not(.disabled):hover {
+    background: var(--background);
+    border-color: var(--border-divider);
+}
+
+.cal-day.selected {
+    background: var(--accent-brand);
+    border-color: var(--accent-brand);
+    color: #ffffff;
+}
+
+
+/* =========================
+   TIME SLOTS
+========================= */
+
+.time-slots-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.time-slots-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.time-slot-btn {
+    padding: 0.75rem 0.5rem;
+
+    background: var(--surface);
+    border: 1px solid var(--border-divider);
+    color: var(--text-primary);
+
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+
+    transition: all 0.2s ease;
+}
+
+.time-slot-btn:hover {
+    border-color: var(--text-primary);
+}
+
+.time-slot-btn.selected {
+    background: var(--accent-brand);
+    border-color: var(--accent-brand);
+    color: #ffffff;
+}
+
+
+/* =========================
+   BOOKING ACTIONS
+========================= */
+
+.booking-action-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    margin-top: auto;
+}
+
+.cancellation-notice {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.btn-confirm-booking {
+    width: 100%;
+    padding: 1rem;
+
+    font-size: 14px;
+}
