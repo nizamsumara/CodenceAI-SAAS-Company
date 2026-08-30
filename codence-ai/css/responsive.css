@@ -1,0 +1,582 @@
+/* ============================================================
+   css/responsive.css
+   Responsive layout for tablet and mobile devices
+   ============================================================ */
+
+
+/* ============================================================
+   TABLET / SMALL LAPTOP
+   ============================================================ */
+
+@media (max-width: 1100px) {
+
+    /* About */
+    .about-hero-container,
+    .about-mission-container,
+    .journey-row,
+    .capabilities-grid,
+    .testimonial-hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-divider {
+        display: none;
+    }
+
+    /* Team */
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* About hero image */
+    .about-hero-image-panel {
+        justify-content: flex-start;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Testimonial */
+    .testimonial-image-side {
+        justify-content: flex-start;
+    }
+
+    .testimonial-graphic {
+        max-width: 320px;
+    }
+
+    /* Footer */
+    .footer-container {
+        gap: 3rem;
+    }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    /* --------------------------------------------------------
+       Navbar
+       -------------------------------------------------------- */
+
+    .nav-container {
+        padding: 0 1.5rem;
+    }
+
+    .nav-menu {
+        gap: 1.5rem;
+    }
+
+    .nav-actions {
+        gap: 1.5rem;
+    }
+
+
+    /* --------------------------------------------------------
+       General Section Padding
+       -------------------------------------------------------- */
+
+    .hero-section,
+    .home-cta-section,
+    .capabilities-section,
+    .about-hero-section,
+    .about-mission-section,
+    .about-journey-section,
+    .about-team-section,
+    .services-hero-section,
+    .testimonial-hero-section {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+
+    /* --------------------------------------------------------
+       Home
+       -------------------------------------------------------- */
+
+    .hero-section {
+        padding-top: 7rem;
+        padding-bottom: 8rem;
+    }
+
+    .hero-title {
+        font-size: 52px;
+    }
+
+    .home-cta-title {
+        font-size: 44px;
+    }
+
+    .capabilities-title {
+        font-size: 34px;
+    }
+
+
+    /* --------------------------------------------------------
+       About
+       -------------------------------------------------------- */
+
+    .about-hero-section {
+        padding-top: 5rem;
+        padding-bottom: 6rem;
+    }
+
+    .about-hero-title {
+        font-size: 52px;
+    }
+
+    .about-hero-container {
+        gap: 3rem;
+    }
+
+    .about-hero-description {
+        max-width: 650px;
+    }
+
+    .single-image-wrapper {
+        max-width: 420px;
+    }
+
+    .journey-main-title,
+    .team-title {
+        font-size: 36px;
+    }
+
+    .journey-row {
+        gap: 2.5rem;
+    }
+
+
+    /* --------------------------------------------------------
+       Services
+       -------------------------------------------------------- */
+
+    .services-hero-section {
+        padding-top: 4rem;
+        padding-bottom: 6rem;
+    }
+
+    .services-title {
+        font-size: 52px;
+    }
+
+
+    /* --------------------------------------------------------
+       Contact
+       -------------------------------------------------------- */
+
+    .contact-hero-section {
+        padding: 4rem 1.5rem 6rem;
+    }
+
+    .contact-form-panel {
+        padding: 2.5rem;
+    }
+
+    .contact-title {
+        font-size: 38px;
+    }
+
+    .form-row-two-col {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* --------------------------------------------------------
+       Booking Modal
+       -------------------------------------------------------- */
+
+    .booking-modal-container {
+        max-width: 94%;
+    }
+
+    .booking-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-left-panel {
+        border-right: none;
+        border-bottom: 1px solid var(--border-divider);
+    }
+
+
+    /* --------------------------------------------------------
+       Auth Modal
+       -------------------------------------------------------- */
+
+    .auth-modal-wrapper {
+        max-width: 420px;
+    }
+
+
+    /* --------------------------------------------------------
+       Footer
+       -------------------------------------------------------- */
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .site-footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    /* --------------------------------------------------------
+       Navbar
+       -------------------------------------------------------- */
+
+    .nav-container {
+        height: 70px;
+        padding: 0 1rem;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-actions {
+        gap: 1rem;
+    }
+
+    .btn-signin {
+        font-size: 12px;
+    }
+
+    .site-logo {
+        height: 28px;
+    }
+
+
+    /* --------------------------------------------------------
+       Home
+       -------------------------------------------------------- */
+
+    .hero-section {
+        padding: 5rem 1.25rem 6rem;
+    }
+
+    .hero-tagline {
+        font-size: 11px;
+        margin-bottom: 1.25rem;
+    }
+
+    .hero-title {
+        font-size: 40px;
+        line-height: 1.12;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        margin-bottom: 2.5rem;
+    }
+
+    .hero-actions {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .home-cta-section {
+        padding: 6rem 1.25rem;
+    }
+
+    .home-cta-title {
+        font-size: 36px;
+    }
+
+    .home-cta-subtitle {
+        font-size: 16px;
+    }
+
+    .capabilities-section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .capabilities-title {
+        font-size: 30px;
+    }
+
+    .capability-card {
+        padding: 2rem;
+    }
+
+    .capability-tags {
+        flex-wrap: wrap;
+    }
+
+
+    /* --------------------------------------------------------
+       Stats
+       -------------------------------------------------------- */
+
+    .stat-box {
+        width: 220px;
+        height: 140px;
+    }
+
+    .stat-value {
+        font-size: 42px;
+    }
+
+
+    /* --------------------------------------------------------
+       About
+       -------------------------------------------------------- */
+
+    .about-hero-section,
+    .about-mission-section,
+    .about-journey-section,
+    .about-team-section {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .about-hero-section {
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+    }
+
+    .about-hero-title {
+        font-size: 40px;
+    }
+
+    .about-hero-description {
+        font-size: 16px;
+    }
+
+    .mission-heading {
+        font-size: 32px;
+    }
+
+    .mission-right-col {
+        gap: 2.5rem;
+    }
+
+    .journey-main-title,
+    .team-title {
+        font-size: 30px;
+    }
+
+    .journey-timeline-grid {
+        gap: 3rem;
+    }
+
+    .journey-center-line,
+    .journey-node {
+        display: none;
+    }
+
+    .journey-row {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .journey-row:nth-child(even) .journey-text-col {
+        order: 1;
+    }
+
+    .journey-row:nth-child(even) .journey-img-col {
+        order: 2;
+    }
+
+    .text-align-right,
+    .text-align-left {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .journey-step-title {
+        font-size: 28px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+
+    /* --------------------------------------------------------
+       Services
+       -------------------------------------------------------- */
+
+    .services-hero-section {
+        padding: 4rem 1.25rem 5rem;
+    }
+
+    .services-title {
+        font-size: 40px;
+    }
+
+    .services-subtitle {
+        font-size: 16px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card-inner {
+        padding: 1.75rem;
+    }
+
+    .services-cta-block {
+        padding: 3rem 1.5rem;
+    }
+
+    .services-cta-title {
+        font-size: 30px;
+    }
+
+
+    /* --------------------------------------------------------
+       Contact
+       -------------------------------------------------------- */
+
+    .contact-hero-section {
+        padding: 3rem 1.25rem 5rem;
+    }
+
+    .contact-container {
+        gap: 2.5rem;
+    }
+
+    .contact-form-panel {
+        padding: 2rem 1.5rem;
+    }
+
+    .contact-title {
+        font-size: 34px;
+    }
+
+    .contact-subtitle {
+        font-size: 14px;
+    }
+
+    .social-icons-row {
+        gap: 0.6rem;
+        flex-wrap: wrap;
+    }
+
+    .social-img-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    /* --------------------------------------------------------
+       Booking Modal
+       -------------------------------------------------------- */
+
+    .booking-modal-overlay {
+        padding: 0.75rem;
+    }
+
+    .booking-modal-container {
+        max-width: 100%;
+        max-height: 94vh;
+    }
+
+    .booking-left-panel,
+    .booking-right-panel {
+        padding: 2rem 1.25rem;
+    }
+
+    .booking-title {
+        font-size: 30px;
+    }
+
+    .booking-subtitle {
+        font-size: 13px;
+    }
+
+    .time-slots-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    /* --------------------------------------------------------
+       Auth Modal
+       -------------------------------------------------------- */
+
+    .auth-modal-overlay {
+        padding: 1rem;
+    }
+
+    .auth-modal-wrapper {
+        max-width: 100%;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .auth-view-title {
+        font-size: 28px;
+    }
+
+
+    /* --------------------------------------------------------
+       Footer
+       -------------------------------------------------------- */
+
+    .site-footer {
+        padding: 4rem 1.25rem 2.5rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .footer-divider-line {
+        margin-top: 1rem;
+    }
+
+    .footer-utility-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+
+/* ============================================================
+   VERY SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 400px) {
+
+    .hero-title,
+    .about-hero-title,
+    .services-title {
+        font-size: 34px;
+    }
+
+    .home-cta-title {
+        font-size: 32px;
+    }
+
+    .contact-title {
+        font-size: 30px;
+    }
+
+    .booking-title {
+        font-size: 27px;
+    }
+
+    .auth-modal-wrapper {
+        padding: 2rem 1.25rem;
+    }
+}
