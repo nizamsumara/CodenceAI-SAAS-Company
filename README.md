@@ -102,4 +102,5 @@ incoming requests from one place.
 ## Contributors
 
 -   Nizam Sumara
--   Project Team
+-   Amaan Boghani
+-   Shamir Bukhari
